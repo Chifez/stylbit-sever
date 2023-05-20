@@ -4,16 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "start:dev": "nodemon dist/index.js",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist"
+    "build:dev": "tsc --watch --preserveWatchOutput",
+    "start:dev": "nodemon dist/index.js"
   },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -30,8 +23,6 @@
     "@types/node": "^18.13.0",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
-    "pre-commit": "^1.2.2",
-    "rimraf": "^5.0.1",
     "typescript": "^4.9.5"
   }
 }
